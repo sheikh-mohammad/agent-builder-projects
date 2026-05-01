@@ -63,7 +63,7 @@ class WorkflowInput(BaseModel):
 
 # Main code entrypoint
 async def run_workflow(workflow_input: WorkflowInput):
-  with trace("Agent builder workflow"):
+  with trace("Data enrichment"):
     state = {
 
     }
@@ -85,7 +85,8 @@ async def run_workflow(workflow_input: WorkflowInput):
         *conversation_history
       ],
       run_config=RunConfig(trace_metadata={
-        "__trace_source__": "agent-builder"
+        "__trace_source__": "agent-builder",
+        "workflow_id": "wf_69f477ca3e0c8190b116f5a78cf2d7820c98dae53e6426c3"
       })
     )
 
@@ -101,7 +102,8 @@ async def run_workflow(workflow_input: WorkflowInput):
         *conversation_history
       ],
       run_config=RunConfig(trace_metadata={
-        "__trace_source__": "agent-builder"
+        "__trace_source__": "agent-builder",
+        "workflow_id": "wf_69f477ca3e0c8190b116f5a78cf2d7820c98dae53e6426c3"
       })
     )
     summarize_and_display_result = {
