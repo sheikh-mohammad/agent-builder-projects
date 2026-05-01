@@ -1,7 +1,11 @@
 [project]
 name = "data-enrichment"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Pull together data to answer user questions"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "openai>=2.33.0",
+    "openai-agents>=0.15.0",
+    "pydantic>=2.13.3",
+]
